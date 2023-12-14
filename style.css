@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2? family= Lato:wght@100;300;400;700 & display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sem serifa;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --main-color: ;
+  --text-color: ;
+  --bg-color: ;
+}
