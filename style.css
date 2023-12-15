@@ -61,3 +61,13 @@ header {
   font-size: 1.8rem;
   cursor: pointer;
 }
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.shop {
+  margin-top: 2rem;
+}
