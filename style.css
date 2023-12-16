@@ -63,6 +63,17 @@ header {
   cursor: pointer;
 }
 
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg-color);
+  box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 600;
@@ -117,4 +128,8 @@ header {
   color: var(--bg-color);
   padding: 10px;
   cursor: pointer;
+}
+
+.add-cart:hover {
+  background: hsl(249, 32%, 17%);
 }
