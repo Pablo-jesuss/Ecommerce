@@ -103,3 +103,17 @@ header {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
+
+.price {
+  font-weight: 500;
+}
+
+.add-cart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 10px;
+  cursor: pointer;
+}
