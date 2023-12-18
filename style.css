@@ -124,6 +124,22 @@ header {
   cursor: pointer;
 }
 
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--text-color);
+}
+
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 600;
