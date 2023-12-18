@@ -81,6 +81,21 @@ header {
   font-weight: 600;
 }
 
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 600;
