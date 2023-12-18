@@ -106,6 +106,24 @@ header {
   text-transform: uppercase;
 }
 
+.cart-price {
+  font-weight: 500;
+}
+
+.cart-quantity {
+  border: 1px solid var(--text-color);
+  outline-color: var(--main-color);
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 600;
