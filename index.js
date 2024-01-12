@@ -41,5 +41,7 @@ function updatetotal() {
     var cartBox = cartBoxes[i];
     var priceElement = cartBox.getElementsByClassName("cart-price")[0];
     var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
+    var quantity = quantityElement.value;
+    total = total + price * quantity;
   }
 }
