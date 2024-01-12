@@ -31,3 +31,10 @@ function removeCartItem(event) {
   var buttonClicked = event.target;
   buttonClicked.parentElement.remove();
 }
+
+// Update Total
+
+function updatetotal() {
+  var cartContent = document.getElementsByClassName("cart-content")[0];
+  var cartBoxes = cartContent.getElementsByTagName("cart-box");
+}
