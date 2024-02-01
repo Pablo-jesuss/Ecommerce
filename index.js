@@ -36,6 +36,14 @@ for (var i = 0; i < quantityInputs.length; i++) {
   input.addEventListener("change", quantityChanged);
 }
 
+// Add to Cart
+
+var addCart = document.getElementsByClassName("add-cart");
+for (var i = 0; i < addCart.length; i++) {
+  var button = addCart[i];
+  button.addEventListener("click", addCartClicked);
+}
+
 // Remove cart
 
 function removeCartItem(event) {
@@ -67,6 +75,7 @@ function updatetotal() {
     var quantity = parseFloat(quantityElement.value);
 
     total = total + price * quantity;
+    total = Math.round(total * 100) / 100;
   }
 
   document.getElementsByClassName("total-price")[0].innerText =
