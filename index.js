@@ -33,7 +33,7 @@ function ready() {
 var quantityInputs = document.getElementsByClassName("cart-quantity");
 for (var i = 0; i < quantityInputs.length; i++) {
   var input = quantityInputs[i];
-  input.addEventListener("change", quantityChanges);
+  input.addEventListener("change", quantityChanged);
 }
 
 // Remove cart
@@ -44,27 +44,31 @@ function removeCartItem(event) {
   updatetotal();
 }
 
-function quantityChanges(event) {
+function quantityChanged(event) {
   var input = event.target;
-  if (NaN(input.value) || input.value <= 0) {
+  if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
+  updatetotal();
 }
 
 // Update Total
 
 function updatetotal() {
   var cartContent = document.getElementsByClassName("cart-content")[0];
-  var cartBoxes = cartContent.getElementsByTagName("cart-box");
+  var cartBoxes = cartContent.getElementsByClassName("cart-box"); // Correção aqui
   var total = 0;
+
   for (var i = 0; i < cartBoxes.length; i++) {
     var cartBox = cartBoxes[i];
     var priceElement = cartBox.getElementsByClassName("cart-price")[0];
     var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
-    var price = parseFloat(priceElement.innerText.replace("$", ""));
-    var quantity = quantityElement.value;
-    total = total + price * quantity;
+    var price = parseFloat(priceElement.innerText.replace("R$", ""));
+    var quantity = parseFloat(quantityElement.value);
 
-    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+    total = total + price * quantity;
   }
+
+  document.getElementsByClassName("total-price")[0].innerText =
+    "R$" + total.toFixed(2); // Adicionado toFixed(2) para formatar o total com duas casas decimais
 }
