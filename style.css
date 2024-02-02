@@ -76,6 +76,10 @@ header {
   color: var(--bg-color);
 }
 
+.cart-content {
+  min-height: 100%;
+}
+
 .cart {
   position: fixed;
   top: 0;
