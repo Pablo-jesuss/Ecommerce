@@ -56,11 +56,24 @@ header {
   font-size: 1.1rem;
   color: var(--text-color);
   font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
 }
 
 #cart-icon {
   font-size: 1.8rem;
   cursor: pointer;
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Ajusta a duração da transição para 0.5s */
+  border-radius: 50%;
+}
+
+#cart-icon:hover {
+  transform: rotate(360deg);
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
 .cart {
@@ -87,23 +100,32 @@ header {
 }
 
 .cart-box {
-  display: grid;
-  grid-template-columns: 32% 50% 18%;
+  display: flex;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  border: 1px solid var(--main-color);
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-box:hover {
+  transform: scale(1.02);
 }
 
 .cart-img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  padding: 10px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .detail-box {
-  display: grid;
-  row-gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 10px;
 }
 
 .cart-product-title {
@@ -113,6 +135,7 @@ header {
 
 .cart-price {
   font-weight: 500;
+  color: var(--main-color);
 }
 
 .cart-quantity {
@@ -127,6 +150,11 @@ header {
   font-size: 1.5rem;
   color: var(--main-color);
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.cart-remove:hover {
+  color: #b10d0d;
 }
 
 .total {
@@ -139,14 +167,18 @@ header {
 .total-title {
   font-size: 1rem;
   font-weight: 600;
+  margin-top: 2.5rem;
 }
 
 .total-price {
+  margin-top: 2.5rem;
   margin-left: 0.5rem;
 }
 
 .btn-buy {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 1.5rem;
   padding: 12px 20px;
   border: none;
@@ -155,6 +187,8 @@ header {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .btn-buy:hover {
@@ -169,6 +203,12 @@ header {
   cursor: pointer;
   color: var(--text-color);
 }
+
+#close-cart:hover {
+  transform: rotate(90deg);
+  color: var(--main-color);
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 600;
@@ -227,4 +267,22 @@ header {
 
 .add-cart:hover {
   background: hsl(249, 32%, 17%);
+}
+
+footer {
+  background-color: #171427;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .product-img {
+    padding: 10px;
+    height: auto;
+  }
 }
