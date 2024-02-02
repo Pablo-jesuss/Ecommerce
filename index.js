@@ -44,6 +44,12 @@ for (var i = 0; i < addCart.length; i++) {
   button.addEventListener("click", addCartClicked);
 }
 
+// button de Comprar
+
+document
+  .getElementsByClassName("btn-buy")[0]
+  .addEventListener("click", buyButtonClicked);
+
 function addCartClicked(event) {
   var button = event.target;
   var shopProducts = button.parentElement;
