@@ -64,6 +64,14 @@ function addProductToCart(title, price, productImg) {
   }
 }
 
+var cartBoxContent = `<img src="image/product2.jpg" alt="" class="cart-img" />
+<div class="detail-box">
+  <div class="cart-product-title">Fone via bluetooth</div>
+  <div class="cart-price">R$ 300,00</div>
+  <input type="number" value="1" class="cart-quantity" />
+</div>
+<!--Remove Cart-->
+<i class="bx bxs-trash-alt cart-remove"></i>`;
 // Remove cart
 
 function removeCartItem(event) {
