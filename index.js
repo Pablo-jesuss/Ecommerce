@@ -46,6 +46,15 @@ for (var i = 0; i < addCart.length; i++) {
 
 // button de Comprar
 
+function buyButtonClicked() {
+  alert("Seu pedido foi feito");
+  var cartContent = document.getElementsByClassName("cart-content")[0];
+  while (cartContent.hasChildNodes()) {
+    cartContent.removeChild(cartContent.firstChild);
+  }
+  updatetotal();
+}
+
 document
   .getElementsByClassName("btn-buy")[0]
   .addEventListener("click", buyButtonClicked);
