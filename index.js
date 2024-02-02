@@ -72,6 +72,15 @@ var cartBoxContent = `<img src="image/product2.jpg" alt="" class="cart-img" />
 </div>
 <!--Remove Cart-->
 <i class="bx bxs-trash-alt cart-remove"></i>`;
+cartShopBox.innerHTML = cartBoxContent;
+cartItems.append(cartShopBox);
+cartShopBox
+  .getElementsByClassName("cart-remove")[0]
+  .addEventListener("click", removeCartItem);
+cartShopBox
+  .getElementsByClassName("cart-quantity")[0]
+  .addEventListener("change", quantityChanged);
+
 // Remove cart
 
 function removeCartItem(event) {
